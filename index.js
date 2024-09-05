@@ -12,7 +12,7 @@ class rubyParser {
             this.parsed = this.parser.parse(rubyString);
             return this.parsed.ast;
         } else if (typeof filePath === "string") {
-            this.source = fs.readFileSync(filePath, 'utf8');
+            this.source = this.fs.readFileSync(filePath, 'utf8');
             this.parsed = this.parser.parse(this.source);
             return this.parsed.ast;
         }
